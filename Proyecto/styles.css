@@ -1,0 +1,992 @@
+/* styles.css */
+
+body {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header */
+header {
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: 60px;
+    background-color: white;
+    border-bottom: 2px solid #ddd;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 12px 0px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Header */
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    
+    background-color: #ffffff;
+    color: white;
+    
+}
+
+.header-logo {
+    display: flex;
+    align-items: center;
+}
+
+.header-logo img {
+    width: 50px; /* Ajusta el tamaño según sea necesario */
+    height: 50px;
+    border-radius: 50%; /* Hacer la imagen redonda */
+    margin-right: 1rem;
+}
+
+.header-logo span {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #3F7351; /* Color verde */
+}
+
+
+.logo-nav-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    max-width: 80px;
+    margin-right: 20px;
+}
+
+.desktop-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.desktop-nav ul li {
+    margin: 0 10px;
+}
+
+.desktop-nav ul li a {
+    text-decoration: none;
+    color: #000000;
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: 400;
+    transition: background-color 0.3s, color 0.3s;
+    background-color: #e9e8e5;
+}
+
+.desktop-nav ul li a:hover {
+    background-color: #3F7351;
+    color: white;
+}
+
+
+.menu-icon {
+    font-size: 2rem;
+    cursor: pointer;
+    color: #000000;
+    display: none; /* Ocultar icono de hamburguesa por defecto */
+}
+
+/* Navegación móvil */
+.mobile-nav {
+    display: none; /* Ocultar menú móvil por defecto */
+    background-color: #333; /* Fondo del menú móvil */
+    position: absolute;
+    top: 80px; /* Ajusta la posición según sea necesario */
+    left: 0;
+    width: 100vw;
+    text-align: center;
+    z-index: 1;
+}
+
+.mobile-nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.mobile-nav li {
+    margin: 0.5rem 0;
+}
+
+.mobile-nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 15px;
+    padding: 3px;
+}
+.mobile-nav a i {
+    margin-right: 0.5rem; /* Espacio entre el icono y el texto */
+}
+
+/* Media Queries para dispositivos móviles */
+@media (max-width: 768px) {
+    .menu-icon {
+        display: block; /* Mostrar icono de hamburguesa en pantallas pequeñas */
+    }
+
+    .desktop-nav {
+        display: none; /* Ocultar menú de navegación estándar en pantallas pequeñas */
+    }
+
+    .header-container {
+        justify-content: space-between;
+        width: 74vw;
+    }
+
+    .menu-icon {
+        margin-left: auto; /* Mover el icono de hamburguesa a la derecha */
+    }  
+
+   
+}
+
+/* Mostrar navegación estándar en pantallas grandes */
+@media (min-width: 769px) {
+    .mobile-nav {
+        display: none; /* Ocultar menú móvil en pantallas grandes */
+    }
+
+ 
+
+    .desktop-nav {
+        display: block; /* Mostrar menú de navegación estándar en pantallas grandes */
+    }
+
+    .desktop-nav ul {
+        display: flex;
+        justify-content: space-between;
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .desktop-nav li {
+        margin: 0 1rem;
+    }
+
+    .desktop-nav a {
+        color: white;
+        text-decoration: none;
+        font-size: 1rem;
+    }
+
+    .desktop-nav a:hover {
+        color: #4CAF50;
+    }
+}
+
+
+
+
+/* Header Content with Video Background */
+.header-content {
+    position: relative;
+    color: white;
+    margin-top: 70px; /* Espacio para el header fijo */
+    padding: 2rem;
+    height: 450px; /* Ajusta la altura según sea necesario */
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+#bg-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.header-text {
+    position: relative;
+    z-index: 1;
+    text-align: left; /* Alinear el texto a la izquierda */
+    padding-left: 2rem; /* Espacio desde el borde izquierdo */
+}
+
+.header-text h1, .header-text p {
+    margin: 0;
+    color: white; /* Letras blancas */
+    text-shadow: 2px 2px 4px #004d00;
+}
+
+/* ... Código CSS posterior ... */
+
+
+
+/* Section */
+section {
+    padding: 2rem;
+    margin: 1rem auto;
+    max-width: 1000px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+section h2, section h3 {
+    color: #3F7351;
+}
+
+section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+section ul li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Sección Quiénes Somos */
+#quienes-somos {
+    padding: 2rem;
+    background-color: #f2f2f2; /* Fondo gris */
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 1rem auto;
+    max-width: 1000px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center; /* Centrar el texto para dispositivos móviles */
+}
+
+#quienes-somos h2 {
+    color: #3F7351;
+    margin-bottom: 1rem;
+    text-align: center;
+    font-size: 2rem;
+}
+
+.quienes-somos-content {
+    display: flex;
+    flex-direction: column; /* Cambiar a columna para dispositivos móviles */
+    justify-content: center;
+    align-items: center;
+}
+
+.texto {
+    margin: 1rem 0;
+}
+
+.texto p {
+    font-size: 1.2rem; /* Texto de mayor tamaño */
+    color: #333;
+    margin-bottom: 1rem;
+    text-align: justify;
+}
+
+.texto strong {
+    color: #3F7351; /* Color verde para resaltar palabras importantes */
+}
+
+.contact-button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 1rem;
+}
+
+.contact-button:hover {
+    background-color: #45a049;
+}
+
+.imagen {
+    text-align: center;
+}
+
+.imagen img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Media Queries para dispositivos móviles */
+@media (min-width: 768px) {
+    .quienes-somos-content {
+        flex-direction: row; /* Cambiar a fila para pantallas más grandes */
+    }
+
+    .texto {
+        flex: 1;
+        margin-right: 1rem;
+        text-align: left; /* Alinear el texto a la izquierda para pantallas más grandes */
+    }
+
+    .imagen {
+        flex: 1;
+    }
+}
+
+
+/* ... Código CSS posterior ... */
+
+/* ... Código CSS anterior ... */
+
+/* Introducción */
+#introduccion {
+    padding: 2rem;
+    background-color: #f5f5f5;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 1rem auto;
+    max-width: 1000px;
+    
+    position: relative;
+    overflow: hidden;
+    background-image: url('./img/fondoform.jpg'); /* Imagen de fondo sutil */
+    background-size: cover;
+    background-position: center;
+    color: rgb(8, 8, 8);
+}
+
+#introduccion h2, #introduccion h3 {
+    color: #ffffff;
+    font-weight: 1500;
+    text-align: center;
+    font-size: 2rem;
+    text-shadow: 2px 2px 4px #004d00;
+}
+
+#introduccion p {
+    font-size: 1.5rem; /* Texto de mayor tamaño */
+    color: #000000; /* Color del texto */
+    margin-bottom: 1rem;
+}
+
+.valores-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.valor {
+    background-color: rgba(255, 255, 255, 0.8); /* Fondo semi-transparente */
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.valor:hover {
+    transform: scale(1.05);
+    background-color: rgba(255, 255, 255, 1);
+}
+
+.valor .animated-icon {
+    font-size: 50px;
+    color: #3F7351; /* Color verde */
+    margin-bottom: 0.5rem;
+    transition: transform 0.3s;
+}
+
+.valor:hover .animated-icon {
+    animation: bounce 1.5s infinite;
+    color: #95D904;
+}
+
+.valor span {
+    color: #333;
+    font-size: 1rem;
+}
+
+/* Animaciones CSS */
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-20px);
+    }
+    60% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Media Queries para dispositivos móviles */
+@media (max-width: 768px) {
+    .valores-grid {
+        grid-template-columns: 1fr; /* Una columna en dispositivos móviles */
+    }
+
+    .valor i {
+        font-size: 3rem; /* Aumentar tamaño del icono en móviles para mayor visibilidad */
+    }
+
+    .valor span {
+        font-size: 1.2rem; /* Aumentar tamaño del texto en móviles para mayor legibilidad */
+    }
+}
+
+/* Problemas Ambientales */
+#problemas-ambientales {
+    padding: 2rem;
+    background-color: #f5f5f5;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 1rem auto;
+    max-width: 1000px;
+}
+
+#problemas-ambientales h2 {
+    color: #3F7351;
+    text-align: center;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+}
+
+.problemas-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+}
+
+.problema {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 1rem;
+    position: relative;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.problema:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.problema i {
+    font-size: 50px;
+    color: #3F7351;
+    margin-bottom: 0.5rem;
+}
+
+.problema h3 {
+    color: #333;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.problema p {
+    color: #555;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+.problema img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.problema button {
+    background-color: #3F7351;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.problema button:hover {
+    background-color: #3F7351;
+}
+
+.info-adicional {
+    display: none;
+    text-align: left;
+}
+
+.info-adicional p {
+    margin: 0.5rem 0;
+}
+
+/* ... Código CSS posterior ... */
+/* styles.css */
+
+/* ... Código CSS anterior ... */
+
+/* Metodología de Trabajo */
+#metodologia {
+    padding: 2rem;
+    background-image: url('./img/metodologia.jpeg'); /* Imagen de fondo con tonos verdes y marrones */
+    background-size: cover;
+    background-position: center;
+    color: white; /* Color del texto para asegurar contraste */
+    position: relative;
+}
+
+#metodologia::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Filtro oscuro para mejorar el contraste del texto */
+    z-index: 1;
+}
+
+#metodologia h2, #metodologia h3, #metodologia p {
+    position: relative;
+    z-index: 2;
+}
+
+#metodologia h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #FFD700; /* Color dorado para destacar el título */
+    font-size: 2rem;
+}
+
+.content-wrapper {
+    background-color: rgba(0, 0, 0, 0.3); /* Fondo semi-transparente para asegurar contraste del texto */
+    padding: 2rem;
+    border-radius: 8px;
+}
+
+#metodologia h3 {
+    font-size: 1.5rem;
+    color: #FFD700; /* Color dorado para destacar los subtítulos */
+}
+
+#metodologia p {
+    font-size: 1.2rem; /* Asegurar legibilidad del texto */
+    color: white; /* Color del texto para asegurar contraste */
+    margin-bottom: 1rem;
+}
+
+/* ... Código CSS posterior ... */
+/* styles.css */
+
+/* ... Código CSS anterior ... */
+
+/* Beneficios */
+#beneficios {
+    padding: 2rem;
+    background-color: #f5f5f5;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 1rem auto;
+    max-width: 1000px;
+}
+
+#beneficios h2 {
+    color: #3F7351;
+    text-align: center;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+}
+
+.tarjetas-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+}
+
+.tarjeta {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    overflow: hidden;
+}
+
+.tarjeta img {
+    width: 100%;
+    height: auto;
+}
+
+.tarjeta-content {
+    padding: 1rem;
+}
+
+.tarjeta h3 {
+    color: #333;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.tarjeta p {
+    color: #555;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+/* Media Queries para dispositivos móviles */
+@media (min-width: 768px) {
+    .tarjetas-container {
+        grid-template-columns: repeat(2, 1fr); /* Dos columnas para pantallas más grandes */
+    }
+
+    
+}
+
+
+/* Casos de Éxito */
+#casos-exito {
+    padding: 2rem;
+    background-color: #f2f2f2; /* Fondo gris */
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 1rem auto;
+    max-width: 1000px;
+    text-align: center;
+}
+
+#casos-exito h2 {
+    color: #3F7351;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+}
+
+.carousel {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    margin: auto;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.carousel-inner {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item {
+    min-width: 100%;
+    box-sizing: border-box;
+    position: relative;
+    padding: 1rem;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.carousel-item p {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente para la legibilidad del texto */
+    color: white;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #4CAF50;
+    font-size: 2rem;
+    cursor: pointer;
+    user-select: none;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+    border: 2px solid #4CAF50;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carousel-control-prev {
+    left: 10px;
+}
+
+.carousel-control-next {
+    right: 10px;
+}
+
+/* ... Código CSS posterior ... */
+
+
+
+
+/* Servicios Ofrecidos */
+#servicios {
+    padding: 2rem;
+    margin: 1rem auto;
+    max-width: 1000px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#servicios h2 {
+    color: #3F7351;
+    text-align: center;
+    font-size: 2rem;
+}
+
+.tarjetas-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.tarjeta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 45%; /* Ajusta el ancho según sea necesario */
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.tarjeta img {
+    width: 100%;
+    height: 150px; /* Ajusta la altura según sea necesario */
+    object-fit: cover;
+}
+
+.tarjeta-content {
+    padding: 1rem;
+    text-align: center;
+}
+
+.tarjeta-content h3 {
+    color: #3F7351;
+    margin-top: 0;
+}
+
+.tarjeta-content p {
+    margin: 0.5rem 0 0 0;
+}
+@media (min-width: 768px) {
+
+    .tarjeta{
+        width: 23%;
+    }
+}
+
+
+/* Ventajas de Elegir Nuestros Servicios */
+.ventajas {
+    background-color: #f5f5f5; /* Fondo gris */
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-width: 1000px;
+    margin: 1rem auto;
+}
+
+.ventajas h2 {
+    color: #3F7351; /* Título en verde */
+    text-align: center;
+    font-size: 2rem;
+}
+
+.ventajas-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.ventajas-texto {
+    flex: 1;
+    color: #333; /* Letras negras */
+    margin-right: 1rem;
+}
+
+.ventajas-texto ul {
+    list-style: none;
+    padding: 0;
+}
+
+.ventajas-texto li {
+    margin-bottom: 1rem;
+}
+
+.ventajas-texto strong {
+    color: #3F7351; /* Subtítulos y palabras clave resaltadas */
+}
+
+.ventajas-imagen {
+    flex: 1;
+}
+
+.ventajas-imagen img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+
+@media (max-width: 768px) {
+
+    .ventajas-content {
+        flex-direction: column;
+        text-align: justify;
+    }
+}
+
+/* styles.css */
+
+
+
+/* Footer */
+footer {
+    background-color: #f2f2f2; /* Gris más claro */
+    color: #333;
+    padding: 2rem 1rem;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    width: 92vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1000px;
+    margin-bottom: 1rem;
+}
+
+.footer-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 350px;
+    height: 350px;
+    background-color: white; /* Fondo blanco para el círculo */
+    border-radius: 50%; /* Borde redondeado para formar el círculo */
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para darle un toque más elegante */
+}
+
+.footer-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.footer-contact {
+    text-align: left;
+    max-width: 500px;
+}
+
+.footer-contact h2 {
+    color: #3F7351;
+    font-size: 3rem;
+}
+
+.footer-contact p {
+    margin: 0.5rem 0;
+}
+
+.footer-contact button {
+    background-color: #3F7351;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 0.5rem 0;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: block;
+    width: 100%;
+    max-width: 200px;
+    text-align: center;
+}
+
+.footer-contact button:hover {
+    background-color: #45a049;
+}
+
+.footer-social {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.footer-social p {
+    margin-bottom: 0.5rem;
+    color: #4CAF50;
+}
+
+.footer-social .social-icon {
+    color: #333;
+    margin: 0 10px;
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+.footer-social .social-icon:hover {
+    color: #4CAF50;
+}
+
+@media (max-width: 768px) {
+
+    .footer-container {
+        display: flex;
+        flex-direction: column-reverse;
+
+    }
+
+    .footer-logo{
+        width: 250px;
+        height: 250px;
+    }
+
+    .footer-contact{
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    }
+}
